@@ -1,0 +1,9 @@
+com.ido.ble
+com.ido.ble.bluetooth.device
+com.ido.ble.callback
+com.ido.ble.data.manage.database
+com.ido.ble.gps.callback
+com.ido.ble.gps.database
+com.ido.ble.gps.model
+com.ido.ble.protocol.model
+com.no.connect.manage
