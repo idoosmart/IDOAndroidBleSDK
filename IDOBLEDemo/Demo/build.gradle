@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'demo'
             keyPassword '123456'
-            storeFile file('E:/work_project/Git_Lab/Lib_develop/Demo/demo_sign_key.jks')
+            storeFile file('./demo_sign_key.jks')
             storePassword '123456'
         }
     }
