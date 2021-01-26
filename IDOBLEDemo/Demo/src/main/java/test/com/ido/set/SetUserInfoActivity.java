@@ -31,7 +31,7 @@ public class SetUserInfoActivity extends BaseAutoConnectActivity implements View
 
     private SettingCallBack.ICallBack iCallBack = new SettingCallBack.ICallBack() {
         @Override
-        public void onSuccess(SettingCallBack.SettingType type) {
+        public void onSuccess(SettingCallBack.SettingType settingType, Object o) {
             Toast.makeText(SetUserInfoActivity.this, R.string.set_para_tip_msg_ok, Toast.LENGTH_SHORT).show();
             closeProgressDialog();
         }

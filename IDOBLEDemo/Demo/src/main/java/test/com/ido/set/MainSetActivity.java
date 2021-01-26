@@ -50,7 +50,7 @@ public class MainSetActivity extends BaseAutoConnectActivity {
 
     private SettingCallBack.ICallBack iCallBack = new SettingCallBack.ICallBack() {
         @Override
-        public void onSuccess(SettingCallBack.SettingType type) {
+        public void onSuccess(SettingCallBack.SettingType type, Object o) {
             Toast.makeText(MainSetActivity.this, R.string.set_para_tip_msg_ok, Toast.LENGTH_SHORT).show();
         }
 

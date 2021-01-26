@@ -20,9 +20,10 @@ public class SetSleepMonitoringActivity extends BaseAutoConnectActivity {
     private EditText edStartHour,edStartMin,edEndHour,edEndMin;
 
     private SettingCallBack.ICallBack iCallBack = new SettingCallBack.ICallBack() {
+
         @Override
-        public void onSuccess(SettingCallBack.SettingType type) {
-            Toast.makeText(SetSleepMonitoringActivity.this, R.string.set_para_tip_msg_ok, Toast.LENGTH_SHORT).show();
+        public void onSuccess(SettingCallBack.SettingType settingType, Object o) {
+
         }
 
         @Override

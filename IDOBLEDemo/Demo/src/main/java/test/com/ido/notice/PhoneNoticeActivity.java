@@ -39,6 +39,11 @@ public class PhoneNoticeActivity extends BaseAutoConnectActivity {
         public void onUnReadMessage() {
             Toast.makeText(PhoneNoticeActivity.this, R.string.phone_notice_tip_msg_ok, Toast.LENGTH_LONG).show();
         }
+
+        @Override
+        public void onV3MessageNotice(int i) {
+
+        }
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {

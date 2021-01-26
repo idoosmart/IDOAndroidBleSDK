@@ -9,7 +9,10 @@ import com.ido.ble.callback.GetDeviceInfoCallBack;
 import com.ido.ble.protocol.model.ActivityDataCount;
 import com.ido.ble.protocol.model.BasicInfo;
 import com.ido.ble.protocol.model.BatteryInfo;
+import com.ido.ble.protocol.model.CanDownLangInfo;
+import com.ido.ble.protocol.model.CanDownLangInfoV3;
 import com.ido.ble.protocol.model.DeviceSummarySoftVersionInfo;
+import com.ido.ble.protocol.model.FlashBinInfo;
 import com.ido.ble.protocol.model.HIDInfo;
 import com.ido.ble.protocol.model.LiveData;
 import com.ido.ble.protocol.model.NoticeSwitchInfo;
@@ -122,6 +125,21 @@ public class GetInfoActivity extends BaseAutoConnectActivity {
             }else {
                 tvResult.setText("get failed!!!");
             }
+        }
+
+        @Override
+        public void onGetCanDownloadLangInfo(CanDownLangInfo canDownLangInfo) {
+
+        }
+
+        @Override
+        public void onGetFlashBinInfo(FlashBinInfo flashBinInfo) {
+
+        }
+
+        @Override
+        public void onGetCanDownloadLangInfoV3(CanDownLangInfoV3 canDownLangInfoV3) {
+
         }
     };
 

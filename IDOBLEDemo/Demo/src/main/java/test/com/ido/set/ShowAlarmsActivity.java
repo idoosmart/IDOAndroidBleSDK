@@ -28,12 +28,10 @@ public class ShowAlarmsActivity extends BaseAutoConnectActivity {
     private List<Alarm> mAlarmList;
     private List<Alarm> tempList = new ArrayList<>();
     private SettingCallBack.ICallBack iCallBack = new SettingCallBack.ICallBack() {
+
         @Override
-        public void onSuccess(SettingCallBack.SettingType type) {
-            closeProgressDialog();
-            Toast.makeText(ShowAlarmsActivity.this, "delete ok", Toast.LENGTH_SHORT).show();
-            DataUtils.getInstance().saveAlarm(tempList);
-            reset();
+        public void onSuccess(SettingCallBack.SettingType settingType, Object o) {
+
         }
 
         @Override

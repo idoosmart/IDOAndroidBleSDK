@@ -9,6 +9,7 @@ import com.ido.ble.business.sync.SyncPara;
 import com.ido.ble.callback.SyncCallBack;
 import com.ido.ble.callback.SyncV3CallBack;
 import com.ido.ble.data.manage.database.HealthActivity;
+import com.ido.ble.data.manage.database.HealthActivityV3;
 import com.ido.ble.data.manage.database.HealthBloodPressed;
 import com.ido.ble.data.manage.database.HealthBloodPressedItem;
 import com.ido.ble.data.manage.database.HealthHeartRate;
@@ -19,10 +20,12 @@ import com.ido.ble.data.manage.database.HealthPressure;
 import com.ido.ble.data.manage.database.HealthPressureItem;
 import com.ido.ble.data.manage.database.HealthSleep;
 import com.ido.ble.data.manage.database.HealthSleepItem;
+import com.ido.ble.data.manage.database.HealthSleepV3;
 import com.ido.ble.data.manage.database.HealthSpO2;
 import com.ido.ble.data.manage.database.HealthSpO2Item;
 import com.ido.ble.data.manage.database.HealthSport;
 import com.ido.ble.data.manage.database.HealthSportItem;
+import com.ido.ble.data.manage.database.HealthSportV3;
 import com.ido.ble.data.manage.database.HealthSwimming;
 
 import java.util.List;
@@ -172,6 +175,21 @@ public class SyncDataActivity extends BaseAutoConnectActivity {
 
         @Override
         public void onGetHealthSwimmingData(HealthSwimming healthSwimming) {
+
+        }
+
+        @Override
+        public void onGetHealthActivityV3Data(HealthActivityV3 healthActivityV3) {
+
+        }
+
+        @Override
+        public void onGetHealthSportV3Data(HealthSportV3 healthSportV3) {
+
+        }
+
+        @Override
+        public void onGetHealthSleepV3Data(HealthSleepV3 healthSleepV3) {
 
         }
     };

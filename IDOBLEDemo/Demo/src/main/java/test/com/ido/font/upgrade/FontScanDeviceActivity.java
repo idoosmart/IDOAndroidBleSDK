@@ -15,6 +15,7 @@ import android.widget.ListView;
 
 import com.ido.ble.BLEManager;
 import com.ido.ble.BLESpecialAPI;
+import com.ido.ble.bluetooth.connect.ConnectFailedReason;
 import com.ido.ble.bluetooth.device.BLEDevice;
 import com.ido.ble.callback.ConnectCallBack;
 import com.ido.ble.callback.DeviceResponseCommonCallBack;
@@ -108,10 +109,11 @@ public class FontScanDeviceActivity extends Activity  implements View.OnClickLis
         }
 
         @Override
-        public void onConnectFailed() {
+        public void onConnectFailed(ConnectFailedReason connectFailedReason) {
             closeProgressDialog();
             setTitle(getString(R.string.connect_state_failed));
         }
+
 
         @Override
         public void onConnectBreak() {
@@ -125,6 +127,11 @@ public class FontScanDeviceActivity extends Activity  implements View.OnClickLis
             setTitle("OTA");
             selectedDevice.mIsInDfuMode = true;
             btnOk.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        public void onDeviceInNotBindStatus() {
+
         }
 
         @Override

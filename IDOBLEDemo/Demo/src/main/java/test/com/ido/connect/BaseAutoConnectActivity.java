@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.ido.ble.BLEManager;
+import com.ido.ble.bluetooth.connect.ConnectFailedReason;
 import com.ido.ble.bluetooth.device.BLEDevice;
 import com.ido.ble.callback.ConnectCallBack;
 
@@ -68,10 +69,11 @@ public class BaseAutoConnectActivity extends Activity {
         }
 
         @Override
-        public void onConnectFailed() {
+        public void onConnectFailed(ConnectFailedReason connectFailedReason) {
             setTitle(getString(R.string.connect_state_failed));
             onNotConnect();
         }
+
 
         @Override
         public void onConnectBreak() {
@@ -83,6 +85,11 @@ public class BaseAutoConnectActivity extends Activity {
         public void onInDfuMode(BLEDevice bleDevice) {
             setTitle(getString(R.string.connect_state_dfu));
 //            handleDfuState(bleDevice);
+        }
+
+        @Override
+        public void onDeviceInNotBindStatus() {
+
         }
 
         @Override

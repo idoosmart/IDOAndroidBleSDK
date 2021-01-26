@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.ido.ble.BLEManager;
 import com.ido.ble.BLESpecialAPI;
+import com.ido.ble.bluetooth.connect.ConnectFailedReason;
 import com.ido.ble.bluetooth.device.BLEDevice;
 import com.ido.ble.callback.BindCallBack;
 import com.ido.ble.callback.ConnectCallBack;
@@ -116,10 +117,11 @@ public class ScanDeviceActivity extends Activity implements View.OnClickListener
         }
 
         @Override
-        public void onConnectFailed() {
+        public void onConnectFailed(ConnectFailedReason connectFailedReason) {
             closeProgressDialog();
             setTitle(getString(R.string.connect_state_failed));
         }
+
 
         @Override
         public void onConnectBreak() {
@@ -132,6 +134,11 @@ public class ScanDeviceActivity extends Activity implements View.OnClickListener
             closeProgressDialog();
             setTitle(getString(R.string.connect_state_dfu));
             handleDfuState(bleDevice);
+        }
+
+        @Override
+        public void onDeviceInNotBindStatus() {
+
         }
 
         @Override

@@ -71,5 +71,5 @@ dependencies {
     //    compile files('libs/IDoBLELib-Self-1.0.15.jar')
     implementation files('libs/BaiduLBS_Android.jar')
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
-    implementation files('libs/IDoBLELib-Custom-2.5.2.jar')
+    implementation files('libs/IDoBLELib-Custom-2.36.0.jar')
 }

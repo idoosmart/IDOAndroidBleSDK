@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.ido.ble.BLEManager;
 import com.ido.ble.BLESpecialAPI;
+import com.ido.ble.bluetooth.connect.ConnectFailedReason;
 import com.ido.ble.bluetooth.device.BLEDevice;
 import com.ido.ble.bluetooth.setting.BluetoothGattSettingListener;
 import com.ido.ble.callback.ConnectCallBack;
@@ -72,10 +73,11 @@ public class FontUpgradePresenter {
         }
 
         @Override
-        public void onConnectFailed() {
+        public void onConnectFailed(ConnectFailedReason connectFailedReason) {
             BLEManager.unregisterConnectCallBack(connectListener);
             doNextTask();
         }
+
 
         @Override
         public void onConnectBreak() {
@@ -85,6 +87,11 @@ public class FontUpgradePresenter {
         @Override
         public void onInDfuMode(BLEDevice bleDevice) {
 //            failed();
+        }
+
+        @Override
+        public void onDeviceInNotBindStatus() {
+
         }
 
         @Override

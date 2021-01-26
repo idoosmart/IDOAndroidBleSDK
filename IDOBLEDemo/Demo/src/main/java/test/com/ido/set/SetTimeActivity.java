@@ -21,9 +21,11 @@ public class SetTimeActivity extends BaseAutoConnectActivity {
     private EditText etYear, etMonth, etDay, etHour, etMin, etSecond, etWeek;
 
     private SettingCallBack.ICallBack iCallBack = new SettingCallBack.ICallBack() {
+
+
         @Override
-        public void onSuccess(SettingCallBack.SettingType type) {
-            tvResult.setText("set time ok");
+        public void onSuccess(SettingCallBack.SettingType settingType, Object o) {
+
         }
 
         @Override

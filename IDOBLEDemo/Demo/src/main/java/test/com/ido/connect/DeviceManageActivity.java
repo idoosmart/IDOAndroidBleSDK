@@ -119,7 +119,7 @@ public class DeviceManageActivity extends Activity {
         showProgressDialog("switching");
         BLEDevice bleDevice = new BLEDevice();
         bleDevice.mDeviceAddress = macAddress;
-        BLEManager.switchToDevice(bleDevice, new ICommonListener() {
+        BLEManager.switchToDevice(bleDevice.mDeviceAddress, new ICommonListener() {
             @Override
             public void onSuccess(String macAddress) {
                 Toast.makeText(DeviceManageActivity.this, "switch ok", Toast.LENGTH_LONG).show();
